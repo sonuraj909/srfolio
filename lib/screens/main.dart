@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_drawer_menu/navigation_drawer.dart';
-import 'package:navigation_drawer_menu/navigation_drawer_menu.dart';
+import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
 import 'package:portfolio/screens/aboutme.dart';
 import 'package:portfolio/screens/contact.dart';
@@ -16,7 +15,7 @@ class ScreenMainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: kButtonColor,
         centerTitle: true,
         title: TextWidget(
           title: 'PORTFOLIO',

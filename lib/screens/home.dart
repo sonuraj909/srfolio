@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
+import 'package:portfolio/widgets/pdf_viewer_widget.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -10,7 +12,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue,
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage('assets/image/coverpic.jpeg'),
+        ),
       ),
       width: double.infinity,
       height: double.infinity,
@@ -23,10 +28,12 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextWidget(
+                color: kWhiteColor,
                 title: 'Hi \nI\'m Sonu Raj',
                 fsize: 35,
                 fontWeight: FontWeight.bold),
             TextWidget(
+              color: kWhiteColor,
               title: 'Flutter Developer',
               fsize: 20,
             ),
@@ -34,6 +41,9 @@ class Home extends StatelessWidget {
             Row(
               children: [
                 ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(kButtonColor),
+                  ),
                   onPressed: () {},
                   child: TextWidget(
                     title: 'Hire Me',
@@ -41,13 +51,6 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 kWidth,
-                ElevatedButton(
-                  onPressed: () {},
-                  child: TextWidget(
-                    title: 'Download CV',
-                    fsize: 15,
-                  ),
-                ),
               ],
             ),
           ],

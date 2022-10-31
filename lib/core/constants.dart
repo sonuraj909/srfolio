@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_language_fonts/google_language_fonts.dart';
+import 'package:portfolio/core/colors.dart';
 
 const kHeight = SizedBox(
   height: 10,
@@ -9,27 +10,41 @@ const kWidth = SizedBox(
   width: 10,
 );
 
+//text widget
+
 class TextWidget extends StatelessWidget {
   const TextWidget({
     Key? key,
     required this.title,
     required this.fsize,
     this.fontWeight,
+    this.color,
+    this.decoration,
   }) : super(key: key);
   final fontWeight;
   final String title;
   final double fsize;
+  final color;
+  final decoration;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: CyrillicFonts.robotoCondensed(
-        fontSize: fsize,
-        fontWeight: fontWeight,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        title,
+        style: CyrillicFonts.robotoCondensed(
+          decoration: decoration,
+          color: color,
+          fontSize: fsize,
+          fontWeight: fontWeight,
+          fontStyle: FontStyle.italic,
+        ),
       ),
     );
   }
 }
+
+//drawerlistwidget
 
 class portfolioList extends StatelessWidget {
   const portfolioList({
@@ -45,9 +60,12 @@ class portfolioList extends StatelessWidget {
       onTap: () {
         onTap;
       },
-      title: TextWidget(
-        title: title,
-        fsize: 17,
+      title: Center(
+        child: TextWidget(
+          color: kWhiteColor,
+          title: title,
+          fsize: 17,
+        ),
       ),
     );
   }

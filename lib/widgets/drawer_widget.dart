@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_language_fonts/google_language_fonts.dart';
+import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -10,7 +11,8 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 250,
+      backgroundColor: kButtonColor,
+      width: 220,
       child: ListView(children: [
         SizedBox(
           height: 200,
@@ -22,7 +24,9 @@ class DrawerWidget extends StatelessWidget {
                   height: 90,
                   width: 90,
                   decoration: BoxDecoration(
-                    color: Colors.amber,
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage('assets/image/propic.jpeg')),
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
@@ -30,7 +34,9 @@ class DrawerWidget extends StatelessWidget {
                 Text(
                   'Sonu Raj',
                   style: CyrillicFonts.robotoCondensed(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                      color: kWhiteColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
             ),
