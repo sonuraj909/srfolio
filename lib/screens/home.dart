@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
 import 'package:portfolio/widgets/pdf_viewer_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -29,7 +30,12 @@ class Home extends StatelessWidget {
           children: [
             TextWidget(
                 color: kWhiteColor,
-                title: 'Hi \nI\'m Sonu Raj',
+                title: 'Hi,',
+                fsize: 35,
+                fontWeight: FontWeight.bold),
+            TextWidget(
+                color: kWhiteColor,
+                title: 'I\'m Sonu Raj',
                 fsize: 35,
                 fontWeight: FontWeight.bold),
             TextWidget(
@@ -44,7 +50,11 @@ class Home extends StatelessWidget {
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(kButtonColor),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    launchUrl(
+                      Uri(scheme: 'mailto', path: 'sonuraj909@gmail.com'),
+                    );
+                  },
                   child: TextWidget(
                     title: 'Hire Me',
                     fsize: 15,

@@ -211,7 +211,11 @@ class _PortfolioState extends State<Portfolio> {
                   scrollDirection: Axis.horizontal,
                 ),
               ),
-              kHeight2,
+              kHeight,
+              TextWidget(
+                fsize: 16,
+                title: 'Click GitHub Icon for View Repository   ',
+              ),
               IconButton(
                 onPressed: () => setState(() {
                   _launched = _launchInBrowser(toLaunch);

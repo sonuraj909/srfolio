@@ -29,6 +29,7 @@ class TextWidget extends StatelessWidget {
   final double fsize;
   final color;
   final decoration;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -49,27 +50,25 @@ class TextWidget extends StatelessWidget {
 
 //drawerlistwidget
 
-class portfolioList extends StatelessWidget {
-  const portfolioList({
-    Key? key,
-    required this.title,
-    this.onTap,
-  }) : super(key: key);
-  final String title;
-  final onTap;
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      onTap: () {
-        onTap;
-      },
-      title: Center(
-        child: TextWidget(
-          color: kWhiteColor,
-          title: title,
-          fsize: 17,
-        ),
-      ),
-    );
-  }
-}
+// class portfolioList extends StatelessWidget {
+//   const portfolioList({
+//     Key? key,
+//     required this.title,
+//     this.onTap,
+//   }) : super(key: key);
+//   final String title;
+//   final onTap;
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListTile(
+//       onTap: onTap,
+//       title: Center(
+//         child: TextWidget(
+//           color: kWhiteColor,
+//           title: title,
+//           fsize: 17,
+//         ),
+//       ),
+//     );
+//   }
+// }
