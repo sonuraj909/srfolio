@@ -103,7 +103,7 @@ class AboutMe extends StatelessWidget {
                     fsize: 16,
                   ),
                 ),
-                kHeight,
+                kHeight2,
                 Center(
                   child: ElevatedButton(
                     style: ButtonStyle(

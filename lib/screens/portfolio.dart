@@ -90,7 +90,7 @@ class _PortfolioState extends State<Portfolio> {
                   scrollDirection: Axis.horizontal,
                 ),
               ),
-              kHeight,
+              kHeight2,
               const TextWidget(
                 title: 'Portfolio',
                 fsize: 30,
@@ -211,7 +211,7 @@ class _PortfolioState extends State<Portfolio> {
                   scrollDirection: Axis.horizontal,
                 ),
               ),
-              kHeight,
+              kHeight2,
               IconButton(
                 onPressed: () => setState(() {
                   _launched = _launchInBrowser(toLaunch);
@@ -242,7 +242,7 @@ class cardWidget extends StatelessWidget {
     return FlipCard(
       front: Container(
         width: 200,
-        height: 180,
+        height: 200,
         decoration: BoxDecoration(
           color: kButtonColor,
         ),

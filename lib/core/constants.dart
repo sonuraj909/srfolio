@@ -6,6 +6,9 @@ import 'package:portfolio/core/colors.dart';
 const kHeight = SizedBox(
   height: 10,
 );
+const kHeight2 = SizedBox(
+  height: 25,
+);
 const kWidth = SizedBox(
   width: 10,
 );
@@ -31,7 +34,7 @@ class TextWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: Text(
-        textAlign: TextAlign.justify,
+        textAlign: TextAlign.center,
         title,
         style: CyrillicFonts.robotoCondensed(
           decoration: decoration,
