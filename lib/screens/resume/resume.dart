@@ -15,7 +15,8 @@ class Resume extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(9.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const TextWidget(
                   title: 'Experience',
@@ -23,6 +24,7 @@ class Resume extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     TextWidget(
                       title: 'Chris Global Traders',

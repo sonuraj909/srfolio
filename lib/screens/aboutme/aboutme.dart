@@ -17,15 +17,14 @@ class AboutMe extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20, left: 15, right: 10),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Center(
-                  child: TextWidget(
-                    title: 'About Me',
-                    fsize: 30,
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
-                  ),
+                TextWidget(
+                  title: 'About Me',
+                  fsize: 30,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
                 ),
                 kHeight,
                 Center(
@@ -44,7 +43,7 @@ class AboutMe extends StatelessWidget {
                     ),
                   ),
                 ),
-                kHeight,
+                kHeight2,
                 TextWidget(
                   title: 'Who Am I ?',
                   fsize: 20,
