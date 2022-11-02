@@ -28,7 +28,7 @@
   <!--#enddocregion android-queries-->
 
    <application
-        android:label="portfolio"
+        android:label="srfolio"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

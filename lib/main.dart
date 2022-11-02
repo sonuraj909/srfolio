@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/aboutme.dart';
-import 'package:portfolio/screens/main.dart';
+import 'package:portfolio/screens/splash_screen.dart/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'srfolio',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         // This is the theme of your application.
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ScreenMainPage(),
+      home: SplashScreen(),
     );
   }
 }

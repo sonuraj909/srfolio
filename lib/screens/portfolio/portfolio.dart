@@ -1,37 +1,14 @@
-import 'dart:ffi';
-
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:portfolio/screens/portfolio/widgets/card_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../core/constants.dart';
 
-import '../core/colors.dart';
-import '../core/constants.dart';
-
-class Portfolio extends StatefulWidget {
+class Portfolio extends StatelessWidget {
   const Portfolio({super.key});
 
   @override
-  State<Portfolio> createState() => _PortfolioState();
-}
-
-class _PortfolioState extends State<Portfolio> {
-  Future<void>? _launched;
-  Future<void> _launchInBrowser(Uri url) async {
-    if (!await launchUrl(
-      url,
-      mode: LaunchMode.externalApplication,
-    )) {
-      throw 'Could not launch $url';
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final Uri toLaunch =
-        Uri(scheme: 'https', host: 'www.github.com', path: 'sonuraj909');
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -214,12 +191,15 @@ class _PortfolioState extends State<Portfolio> {
               kHeight,
               TextWidget(
                 fsize: 16,
-                title: 'Click GitHub Icon for View Repository   ',
+                title: 'Click GitHub Icon for View Repository',
               ),
               IconButton(
-                onPressed: () => setState(() {
-                  _launched = _launchInBrowser(toLaunch);
-                }),
+                onPressed: () {
+                  launchUrl(Uri(
+                      scheme: 'https',
+                      host: 'www.github.com',
+                      path: 'sonuraj909'));
+                },
                 icon: Image.asset(
                   'assets/image/github.png',
                   fit: BoxFit.cover,
@@ -228,37 +208,6 @@ class _PortfolioState extends State<Portfolio> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class cardWidget extends StatelessWidget {
-  const cardWidget({
-    Key? key,
-    this.child,
-    this.child2,
-  }) : super(key: key);
-  final child;
-  final child2;
-  @override
-  Widget build(BuildContext context) {
-    return FlipCard(
-      front: Container(
-        width: 200,
-        height: 200,
-        decoration: BoxDecoration(
-          color: kButtonColor,
-        ),
-        child: child,
-      ),
-      back: Container(
-        width: 200,
-        height: 180,
-        decoration: BoxDecoration(
-          color: kButtonColor,
-        ),
-        child: child2,
       ),
     );
   }

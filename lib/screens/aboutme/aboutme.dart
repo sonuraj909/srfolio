@@ -1,12 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:portfolio/core/constants.dart';
 import 'package:portfolio/core/text.dart';
-
-import '../core/colors.dart';
-import '../widgets/pdf_viewer_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../../core/colors.dart';
 
 class AboutMe extends StatelessWidget {
   AboutMe({super.key});
@@ -110,9 +108,12 @@ class AboutMe extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all(kButtonColor),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => PdfViewer()),
+                      launchUrl(
+                        Uri(
+                          scheme: 'https',
+                          path:
+                              'drive.google.com/file/d/1sVlydUmwDkuhDmWvpIpLHeUN7QWD3iGY/view',
+                        ),
                       );
                     },
                     child: TextWidget(

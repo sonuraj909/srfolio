@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_language_fonts/google_language_fonts.dart';
 import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
-import 'package:portfolio/screens/aboutme.dart';
-import 'package:portfolio/screens/contact.dart';
-import 'package:portfolio/screens/home.dart';
-import 'package:portfolio/screens/portfolio.dart';
-import 'package:portfolio/screens/resume.dart';
+import 'package:portfolio/screens/aboutme/aboutme.dart';
+import 'package:portfolio/screens/contact/contact.dart';
+import 'package:portfolio/screens/home/home.dart';
+import 'package:portfolio/screens/portfolio/portfolio.dart';
+import 'package:portfolio/screens/resume/resume.dart';
 
 class ScreenMainPage extends StatelessWidget {
   ScreenMainPage({super.key});
@@ -18,8 +18,9 @@ class ScreenMainPage extends StatelessWidget {
         backgroundColor: kButtonColor,
         centerTitle: true,
         title: TextWidget(
-          title: 'PORTFOLIO',
+          title: 'srfolio',
           fsize: 20,
+          fontWeight: FontWeight.bold,
         ),
       ),
       drawer: Drawer(

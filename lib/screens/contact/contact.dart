@@ -31,7 +31,7 @@ class Contact extends StatelessWidget {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     TextWidget(
                       title:
                           'Sonu Raj\nEzhavanparambil House\nKolabhagom p.o Thadiyoor\nPathanamthitta district\nKerala, India',

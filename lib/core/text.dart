@@ -1,6 +1,6 @@
 import 'package:flutter/src/widgets/basic.dart';
 import 'package:portfolio/core/constants.dart';
-import 'package:portfolio/screens/aboutme.dart';
+import 'package:portfolio/screens/aboutme/aboutme.dart';
 
 const kAboutMe = TextWidget(
     title:

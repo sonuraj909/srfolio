@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/colors.dart';
 import 'package:portfolio/core/constants.dart';
-import 'package:portfolio/widgets/pdf_viewer_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget {

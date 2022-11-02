@@ -29,6 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_splash_screen: ^1.3.0
   carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
   flip_card: ^0.6.0
@@ -42,7 +43,22 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
+  flutter_launcher_icons: ^0.10.0
+flutter_icons:
+    android: true
+    image_path: "assets/image/srfolio.png"  
+    adaptive_icon_background: "assets/image/srfolio_adaptive_back.png"
+    adaptive_icon_foreground: "assets/image/srfolio_adaptive_fore.png"
+    web:
+      generate: true
+      image_path: "assets/image/srfolio.png"   
+      background_color: "#f4f3f3"
+      theme_color: "#f4f3f3"
+    windows:
+      generate: true
+      image_path: "assets/image/srfolio.png"  
+      icon_size: 48 
+      
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
